@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Beon&display=swap');
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgb(207, 252, 255);
+  }
+} 
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.neon-blue-glow {
+  position: relative;
+  font-family: 'Beon', sans-serif;
+  text-shadow: 0 0 5px #0dd, 0 0 10px #0dd, 0 0 15px #0dd, 0 0 20px #0dd, 0 0 25px #0dd, 0 0 30px #0dd, 0 0 35px #0dd;
+  background: linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  animation: flicker 5s infinite, flicker 2s infinite;
+}
+
+.hover\:text-shadow:hover {
+  text-shadow: 0 0 5px #ff6fa7, 0 0 10px #ff6fa7, 0 0 15px #ff6fa7, 0 0 20px #ff6fa7;
+}
+
+.hover\:icon-shadow:hover {
+  box-shadow: 0 0 5px #ff6fa7, 0 0 10px #ff6fa7, 0 0 15px #ff6fa7, 0 0 20px #ff6fa7;
+}
+
+
