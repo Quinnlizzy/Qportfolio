@@ -16,8 +16,8 @@ const navigation = [
 export default function Home({
 	searchParams: { customUsername },
 }) {
-
-	const username = customUsername || process.env.GITHUB_USERNAME || data.githubUsername;
+    
+	const username = customUsername || data.githubUsername;
 	const promise = getUser(username);
 
 	return (
